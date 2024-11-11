@@ -13,10 +13,19 @@ let noun = ["fall","cherries","volleyball","relation",
 
 let wordsArr = [adjective,noun,verb,adverb];
 let poem = "The" ;
-let rndmNum = 0
+let rndNum = 0
+
 for (let words of wordsArr) {
-    rndmNum = Math.floor(Math.random() * 8);
-    poem = poem.concat(" ",words[rndmNum])
+    rndNum = Math.floor(Math.random() * 8);
+    poem = poem.concat(" ",words[rndNum])
 }
 
 document.getElementById("p1").innerHTML = poem;
+
+const button = document.getElementById("p1button");
+const p1div = document.getElementById("p1div");
+
+button.addEventListener("click", () => {
+    p1div.style.left = Math.floor(Math.random() * (window.innerWidth - 250)) + "px";
+    p1div.style.top = Math.floor(Math.random() * (window.innerHeight - 50)) + "px";
+})
