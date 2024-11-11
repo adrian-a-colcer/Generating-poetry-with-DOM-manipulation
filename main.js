@@ -25,6 +25,9 @@ document.getElementById("p1").innerHTML = poem;
 const button = document.getElementById("p1button");
 const p1div = document.getElementById("p1div");
 
+p1div.style.left = Math.floor(Math.random() * (window.innerWidth - 250)) + "px";
+p1div.style.top = Math.floor(Math.random() * (window.innerHeight - 50)) + "px";
+
 button.addEventListener("click", () => {
     p1div.style.left = Math.floor(Math.random() * (window.innerWidth - 250)) + "px";
     p1div.style.top = Math.floor(Math.random() * (window.innerHeight - 50)) + "px";
